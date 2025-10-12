@@ -1,0 +1,190 @@
+/* ========== RESET BÁSICO ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== BODY (FUNDO E CENTRALIZAÇÃO) ========== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #C5E8B7 0%, #1A6719 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+}
+
+/* ========== CONTAINER PRINCIPAL ========== */
+.container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* ========== TÍTULOS ========== */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* ========== CÍRCULO DE RESPIRAÇÃO ========== */
+.breathing-circle-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 40px auto;
+}
+
+.breathing-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 5s ease-in-out;
+}
+
+/* Estados do círculo */
+.breathing-circle.inhale {
+    transform: scale(1.5);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.breathing-circle.exhale {
+    transform: scale(1);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.breathing-text {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ========== TIMER ========== */
+.timer {
+    font-size: 1.5em;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* ========== BARRA DE PROGRESSO ========== */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    width: 0%;
+    transition: width 0.5s ease;
+    border-radius: 10px;
+}
+
+/* ========== BOTÕES ========== */
+.controls {
+    margin-top: 40px;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ========== CONFIGURAÇÕES ========== */
+.settings {
+    margin: 20px 0;
+}
+
+.settings label {
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 1em;
+}
+
+.settings select {
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.settings select option {
+    background: #667eea;
+    color: #fff;
+}
+
+/* ========== CAIXA DE INFORMAÇÕES ========== */
+.info-box {
+    background: rgba(179, 67, 67, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.info-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.info-box ul {
+    list-style-position: inside;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+/* ========== RESPONSIVO (CELULAR) ========== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    .breathing-circle-container {
+        width: 250px;
+        height: 250px;
+    }
+}

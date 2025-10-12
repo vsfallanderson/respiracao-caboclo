@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coerência Cardíaca - Respiração Consciente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>❤️ Coerência Cardíaca</h1>
+        <p class="subtitle">Pratique a respiração 5-5 para equilíbrio e bem-estar</p>
+
+        <div class="breathing-circle-container">
+            <div class="breathing-circle" id="breathingCircle">
+                <div class="breathing-text" id="breathingText">Prepare-se</div>
+            </div>
+        </div>
+
+        <div class="timer" id="timer">5:00</div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="controls">
+            <div class="audio-controls">
+            <button id="soundBtn" onclick="toggleSound()">🔇 Som: OFF</button>
+    
+            <label for="volumeSlider">🔊 Volume:</label>
+            <input type="range" id="volumeSlider" min="0" max="100" value="50" oninput="updateVolume()">
+        </div>
+            <button id="startBtn" onclick="startExercise()">Iniciar</button>
+            <button id="pauseBtn" onclick="pauseExercise()" style="display:none;">Pausar</button>
+            <button id="resetBtn" onclick="resetExercise()">Reiniciar</button>
+        </div>
+
+        <div class="settings">
+            <label for="duration">Duração da sessão:</label>
+            <select id="duration">
+                <option value="60">1 minuto (teste)</option>
+                <option value="180">3 minutos</option>
+                <option value="300" selected>5 minutos (recomendado)</option>
+                <option value="600">10 minutos</option>
+            </select>
+        </div>
+
+        <div class="info-box">
+            <h3>🌟 Sobre a Coerência Cardíaca</h3>
+            <ul>
+                <li><strong>Ritmo 5-5:</strong> 5 segundos inspirando, 5 segundos expirando</li>
+                <li><strong>Frequência ideal:</strong> 6 respirações por minuto</li>
+                <li><strong>Benefícios:</strong> Reduz estresse, melhora foco e regula emoções</li>
+                <li><strong>Prática:</strong> 3x ao dia, 5 minutos por sessão</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
